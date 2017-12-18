@@ -1,0 +1,23 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class LeapTest
+{
+	public static void main(String[ ] args) throws FileNotFoundException
+	{
+		FileReader reader = new FileReader("Dates.dat");
+		file = new Scanner(reader);
+		
+		for(int run = 0; run < 5; run++)					//loop
+		{
+		System.out.print("The year ");
+		long yI = file.nextLong();
+		System.out.print(yI + " is");
+		Leap year = new Leap(yI);
+		year.det();
+		System.out.println(" a leap year");
+		}
+	}
+	private static Scanner file;
+}

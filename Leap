@@ -1,0 +1,25 @@
+public class Leap
+{
+	public Leap(long yI) 				//constructor
+	{
+		y = yI;
+	}
+	public void det()					//determine whether it is a leap year or not
+	{
+		if((y % 4) != 0)
+			System.out.print(" not");
+		else if((y % 4) == 0)
+		{
+			if(y < 1582)
+				System.out.print("");
+			if(y >= 1582)
+			{
+				if((y % 100) == 0 && (y % 400) != 0)
+					System.out.print(" not");
+				if((y % 100) == 0 && (y % 400) == 0)
+					System.out.print("");
+			}
+		}
+	}
+	private long y;					//instance fields
+}
